@@ -1,3 +1,5 @@
+Краткая выжимка: Есть 2 структурыЖ up и down, в up записываются изменения, в down записывается откат. По командам раскидаю ниже
+
 Установка через терминал:
 
 	go install github.com/pressly/goose/v3/cmd/goose@latest
@@ -28,4 +30,7 @@
 дальше я создал (goose create add_second_table sql) second_table.sql и на ней уже более явно показано что нужно записать в структуру up, а что в down
 
 5. Применение конктретной миграции
-	goose postgres postgresql://postgres:secret@localhost:5432/postgres up-to /ИЛИ/ down-to
+	goose postgres postgresql://postgres:secret@localhost:5432/postgres up-to /ИЛИ/ down-to<some id> 
+
+6. Статус
+   	goose postgres postgresql://postgres:secret@localhost:5432/postgres status
